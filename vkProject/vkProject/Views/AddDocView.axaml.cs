@@ -12,5 +12,6 @@ public partial class AddDocView : ReactiveUserControl<AddDocViewModel>
     public AddDocView()
     {
         this.WhenActivated(disposables => { });
-        AvaloniaXamlLoader.Load(this);    }
+        AvaloniaXamlLoader.Load(this);
+    }
 }

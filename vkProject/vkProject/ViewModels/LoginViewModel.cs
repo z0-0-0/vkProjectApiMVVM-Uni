@@ -14,13 +14,14 @@ public class LoginViewModel : ViewModelBase, IRoutableViewModel
     public string UrlPathSegment { get; } = Guid.NewGuid().ToString().Substring(0, 5);
     public IScreen HostScreen { get; }
 
-    
+
     private bool _loggedFlag = false;
     private readonly Api _api;
     private UserData _userData;
     private string _clientId;
     private ViewModelBase _contentViewModel;
-  public string ClientId
+
+    public string ClientId
     {
         get => _clientId;
         set => this.RaiseAndSetIfChanged(ref _clientId, value);
@@ -35,7 +36,7 @@ public class LoginViewModel : ViewModelBase, IRoutableViewModel
     }
 
     public ReactiveCommand<Unit, IRoutableViewModel?> GoBack => HostScreen.Router.NavigateBack;
-    
+
     public LoginViewModel(Api api, IScreen hostScreen = null)
     {
         HostScreen = hostScreen ?? Locator.Current.GetService<IScreen>();
@@ -45,11 +46,8 @@ public class LoginViewModel : ViewModelBase, IRoutableViewModel
             y => y.UserId,
             (x, y) => !string.IsNullOrWhiteSpace(x) && x.Length == 8 && !string.IsNullOrWhiteSpace(y));
         TryLogin = ReactiveCommand.Create(_tryLoginCommand, isValidClientId);
-        this.WhenValueChanged(x => x.IsLogged, notifyOnInitialValue: false).Subscribe(_ => SwitchToDocs());
-
-        
+        this.WhenValueChanged(x => x.IsLogged, false).Subscribe(_ => SwitchToDocs());
     }
-  
 
 
     public ICommand TryLogin { get; }
@@ -61,10 +59,10 @@ public class LoginViewModel : ViewModelBase, IRoutableViewModel
 
     private async void SwitchToDocs()
     {
-        var file = await  _api.GetUserFiles();
+        var file = await _api.GetUserFiles();
         var content = await _api.GetSingleFile(file.url);
         HostScreen.Router.Navigate.Execute(new AddDocViewModel(HostScreen, file, content));
-    }   
+    }
 
     public bool IsLogged
     {
@@ -77,7 +75,4 @@ public class LoginViewModel : ViewModelBase, IRoutableViewModel
         _userData = await _api.GetAccessToken(_clientId);
         IsLogged = true;
     }
-    
-    
-    
 }

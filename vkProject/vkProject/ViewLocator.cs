@@ -8,7 +8,7 @@ using vkProject.Views;
 
 namespace vkProject;
 
-public class ViewLocator : ReactiveUI.IViewLocator
+public class ViewLocator : IViewLocator
 {
     public IViewFor ResolveView<T>(T viewModel, string contract = null)
 

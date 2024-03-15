@@ -19,20 +19,20 @@ public class Api
 
     public virtual async Task<string> GetSingleFile(string url)
     {
-        string full_url = "http://localhost:5159/items" + url; 
-         var file_response = await _httpClient.GetStringAsync(full_url);
-         return file_response;
+        var full_url = "http://localhost:5159/items" + url;
+        var file_response = await _httpClient.GetStringAsync(full_url);
+        return file_response;
     }
-    
+
     public virtual async Task<VkFile> GetUserFiles()
     {
         var options = new JsonSerializerOptions();
         options.IncludeFields = true;
         using var response = await _httpClient.GetAsync("http://localhost:5159/docs");
-         var result = await response.Content.ReadFromJsonAsync<VkFile>(options: options);
-         return result;
+        var result = await response.Content.ReadFromJsonAsync<VkFile>(options);
+        return result;
     }
-    
+
     public virtual async Task<UserData> GetAccessToken(string clientId)
     {
         Dictionary<string, string> data = new()

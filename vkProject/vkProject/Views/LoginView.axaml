@@ -9,7 +9,7 @@
     mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
     x:Class="vkProject.Views.LoginView"
     x:DataType="vm:LoginViewModel">
-    
+
     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
         <TextBox Text="{Binding ClientId}" AcceptsReturn="False" PasswordChar="*" Watermark="Enter clientId" />
         <TextBox Text="{Binding UserId}" Watermark="Enter userId" />

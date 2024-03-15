@@ -13,6 +13,5 @@ public partial class LoginView : ReactiveUserControl<LoginViewModel>
     {
         InitializeComponent();
         this.WhenActivated(disposables => { });
-
     }
 }

@@ -7,8 +7,8 @@ namespace vkProject.ViewModels;
 
 public class MainViewModel : ViewModelBase, IScreen
 {
-    public RoutingState Router { get; } = new RoutingState();
-    private Api _api = new Api();
+    public RoutingState Router { get; } = new();
+    private Api _api = new();
 
 
     public ReactiveCommand<Unit, IRoutableViewModel> GoToLogin { get; }
@@ -20,6 +20,6 @@ public class MainViewModel : ViewModelBase, IScreen
     public MainViewModel()
     {
         GoToLogin = ReactiveCommand.CreateFromObservable(
-            () => Router.Navigate.Execute(new LoginViewModel(this._api, this)));
+            () => Router.Navigate.Execute(new LoginViewModel(_api, this)));
     }
 }

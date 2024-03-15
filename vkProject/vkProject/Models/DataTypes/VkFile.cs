@@ -6,13 +6,9 @@ namespace vkProj.Models;
 
 public class VkFile
 {
-
-
     public string url { get; set; }
 
     public string title { get; set; }
-    
+
     public string ext { get; set; }
-
-
 }

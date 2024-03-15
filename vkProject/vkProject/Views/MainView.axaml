@@ -1,23 +1,21 @@
 <rxui:ReactiveWindow
     x:TypeArguments="vm:MainViewModel" xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:vkProject.ViewModels"
     xmlns:rxui="http://reactiveui.net"
     xmlns:app="clr-namespace:vkProject"
     SizeToContent="WidthAndHeight"
     x:Class="vkProject.Views.MainView"
     x:DataType="vm:MainViewModel">
-    
+
     <Grid RowDefinitions="3*,*" HorizontalAlignment="Center" VerticalAlignment="Center">
-       
+
         <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
             <rxui:RoutedViewHost.ViewLocator>
                 <app:ViewLocator />
             </rxui:RoutedViewHost.ViewLocator>
         </rxui:RoutedViewHost>
-        <Button HorizontalAlignment="Center" Grid.Row="1" Margin="10" Command="{Binding GoToLogin}">To Login</Button>   
+        <Button HorizontalAlignment="Center" Grid.Row="1" Margin="10" Command="{Binding GoToLogin}">To Login</Button>
     </Grid>
 
 </rxui:ReactiveWindow>
