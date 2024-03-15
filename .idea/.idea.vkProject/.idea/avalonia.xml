@@ -5,8 +5,10 @@
       <map>
         <entry key="vkProject/vkProject/App.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
         <entry key="vkProject/vkProject/Views/AddDocView.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
+        <entry key="vkProject/vkProject/Views/AndroidMainView.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
         <entry key="vkProject/vkProject/Views/LoginView.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
         <entry key="vkProject/vkProject/Views/MainView.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
+        <entry key="vkProject/vkProject/Views/MainWindow.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
       </map>
     </option>
   </component>

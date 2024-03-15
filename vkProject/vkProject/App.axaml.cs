@@ -18,11 +18,22 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
-        Locator.CurrentMutable.RegisterConstant<IScreen>(new MainViewModel());
         Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetExecutingAssembly());
-        
+
         Locator.CurrentMutable.RegisterLazySingleton(() => new ViewLocator(), typeof(IViewLocator));
-new MainView { DataContext = Locator.Current.GetService<IScreen>() }.Show();
+        if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktopLifetime)
+        {
+            Locator.CurrentMutable.RegisterConstant<IScreen>(new MainViewModel());
+            desktopLifetime.MainWindow = new MainView { DataContext = Locator.Current.GetService<IScreen>() };
+            desktopLifetime.MainWindow.Show();
+        }
+
+        if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewApplicationLifetime)
+        {
+            Locator.CurrentMutable.RegisterConstant<IScreen>(new AndroidMainViewModel());
+            singleViewApplicationLifetime.MainView =
+                new AndroidMainView() { DataContext = Locator.Current.GetService<IScreen>() };
+        }
 
         base.OnFrameworkInitializationCompleted();
     }
