@@ -1,0 +1,37 @@
+﻿<rxui:ReactiveUserControl
+    x:TypeArguments="vm:AddDocViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:rxui="http://reactiveui.net"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:vkProject.ViewModels"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:Class="vkProject.Views.AddDocView"
+    x:DataType="vm:AddDocViewModel">
+    <Border CornerRadius="6" BorderThickness="5" BorderBrush="White">
+        <StackPanel Orientation="Vertical" Spacing="20">
+            <ScrollViewer Margin="50">
+                <ItemsControl ItemsSource="{Binding Files}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="White" CornerRadius="6" BorderThickness="2">
+                                <StackPanel Spacing="5" Orientation="Vertical">
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding title}">
+                                        Title
+                                    </TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding  ext}">
+                                        ext
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+            <TextBlock Text="{Binding FileContent}">
+                Content
+            </TextBlock>
+        </StackPanel>
+    </Border>
+</rxui:ReactiveUserControl>

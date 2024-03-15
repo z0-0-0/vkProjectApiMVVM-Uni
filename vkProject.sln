@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vkProject", "vkProject\vkProject\vkProject.csproj", "{B6D40C48-6933-460F-A385-44B16CA0A19B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vkProject.Android", "vkProject\vkProject.Android\vkProject.Android.csproj", "{E2C2EB80-5FFD-4C27-ABFB-1461373B8792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vkProject.Desktop", "vkProject\vkProject.Desktop\vkProject.Desktop.csproj", "{6BF85A19-6A52-400A-B4D0-3F52A22EBE6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6D40C48-6933-460F-A385-44B16CA0A19B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D40C48-6933-460F-A385-44B16CA0A19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D40C48-6933-460F-A385-44B16CA0A19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D40C48-6933-460F-A385-44B16CA0A19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C2EB80-5FFD-4C27-ABFB-1461373B8792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C2EB80-5FFD-4C27-ABFB-1461373B8792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C2EB80-5FFD-4C27-ABFB-1461373B8792}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E2C2EB80-5FFD-4C27-ABFB-1461373B8792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C2EB80-5FFD-4C27-ABFB-1461373B8792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C2EB80-5FFD-4C27-ABFB-1461373B8792}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6BF85A19-6A52-400A-B4D0-3F52A22EBE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF85A19-6A52-400A-B4D0-3F52A22EBE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF85A19-6A52-400A-B4D0-3F52A22EBE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF85A19-6A52-400A-B4D0-3F52A22EBE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

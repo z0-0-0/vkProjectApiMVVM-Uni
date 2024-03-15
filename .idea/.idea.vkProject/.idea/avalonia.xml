@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="vkProject/vkProject/App.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
+        <entry key="vkProject/vkProject/Views/AddDocView.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
+        <entry key="vkProject/vkProject/Views/LoginView.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
+        <entry key="vkProject/vkProject/Views/MainView.axaml" value="vkProject/vkProject.Desktop/vkProject.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

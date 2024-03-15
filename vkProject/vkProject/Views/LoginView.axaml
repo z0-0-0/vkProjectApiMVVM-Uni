@@ -1,0 +1,19 @@
+﻿<rxui:ReactiveUserControl
+    x:TypeArguments="vm:LoginViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:rxui="http://reactiveui.net"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:vkProject.ViewModels"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:Class="vkProject.Views.LoginView"
+    x:DataType="vm:LoginViewModel">
+    
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBox Text="{Binding ClientId}" AcceptsReturn="False" PasswordChar="*" Watermark="Enter clientId" />
+        <TextBox Text="{Binding UserId}" Watermark="Enter userId" />
+        <Button HorizontalAlignment="Center" Command="{Binding TryLogin}">Try Login</Button>
+    </StackPanel>
+
+</rxui:ReactiveUserControl>
